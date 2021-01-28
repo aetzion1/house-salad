@@ -15,7 +15,7 @@ feature "user can search for house members" do
         # Then my path should be "/search" with "state=CO" in the parameters
         expect(page).to have_content("7 Results")
         # And I should see a message "7 Results"
-        expect(page).to have_content(".member", count: 7)
+        expect(page).to have_css(".member", count: 7)
         # And I should see a list of 7 the members of the house for Colorado
 
         within(first(".member")) do
